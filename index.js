@@ -26,7 +26,7 @@ client.giveawaysManager = new GiveawaysManager(client, {
   default: {
     botsCanWin: false,
     embedColor: "#2F3136",
-    reaction: "🎉",
+    reaction: "<:electron:1100704372888961045>",
     lastChance: {
       enabled: true,
       content: `🛑 **Last chance to enter** 🛑`,
@@ -59,7 +59,7 @@ fs.readdir("./events/giveaways", (_err, files) => {
     if (!file.endsWith(".js")) return;
     const event = require(`./events/giveaways/${file}`);
     let eventName = file.split(".")[0];
-    console.log(`[Event]   🎉 Loaded: ${eventName}`);
+    console.log(`[Event]   <:electron:1100704372888961045> Loaded: ${eventName}`);
     client.giveawaysManager.on(eventName, (...file) => event.execute(...file, client)), delete require.cache[require.resolve(`./events/giveaways/${file}`)];
   })
 })
